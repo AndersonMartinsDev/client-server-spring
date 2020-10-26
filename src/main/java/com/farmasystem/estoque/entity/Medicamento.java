@@ -17,6 +17,6 @@ public class Medicamento {
     @Column(length = 255)
     private String nome;
     @Column(length = 40)
-    private Long lote;
+    private String lote;
     private LocalDate dataVencimento;
 }
