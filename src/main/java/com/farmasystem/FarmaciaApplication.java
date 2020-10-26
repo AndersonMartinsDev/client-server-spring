@@ -8,7 +8,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableAutoConfiguration
 @EntityScan(basePackages = { "com.farmasystem" })
 @ComponentScan(basePackages = { "com.farmasystem" })
 @EnableJpaRepositories(basePackages = { "com.farmasystem" })
