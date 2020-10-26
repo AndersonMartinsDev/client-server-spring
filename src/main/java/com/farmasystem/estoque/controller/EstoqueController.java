@@ -16,7 +16,6 @@ public class EstoqueController implements GenericController<Estoque> {
     @Autowired
     private EstoqueService service;
 
-
     @Override
     @PostMapping
     public void inserir(Estoque entity) {
