@@ -9,7 +9,8 @@ import java.util.List;
 
 @Service
 public class EstoqueService implements GenericService<Estoque> {
-
+    
+    @Autowired
     private EstoqueRepository repository;
 
     @Override
