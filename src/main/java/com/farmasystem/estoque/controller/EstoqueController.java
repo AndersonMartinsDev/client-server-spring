@@ -6,6 +6,8 @@ import com.farmasystem.util.GenericController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 @RestController
@@ -18,13 +20,13 @@ public class EstoqueController implements GenericController<Estoque> {
 
     @Override
     @PostMapping
-    public void inserir(Estoque entity) {
+    public void inserir(@RequestBody Estoque entity) {
         service.inserir(entity);
     }
 
     @Override
     @DeleteMapping("{id}")
-    public void delete(Long id) {
+    public void delete(@PathVariable  Long id) {
         service.delete(id);
     }
 
@@ -36,7 +38,7 @@ public class EstoqueController implements GenericController<Estoque> {
 
     @Override
     @GetMapping(path ="{id}")
-    public Estoque objetoPorId(Long id) {
+    public Estoque objetoPorId(@PathVariable Long id) {
         return service.objetoPorId(id);
     }
 }
