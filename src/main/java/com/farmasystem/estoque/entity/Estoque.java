@@ -17,6 +17,6 @@ public class Estoque {
     private Integer quantidade;
     @Column(length = 40)
     private SetorEnum setor;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Medicamento medicamento;
 }
